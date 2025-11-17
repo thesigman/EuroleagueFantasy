@@ -6,6 +6,8 @@ const playersRouter = require('./routes/players');
 const app = express();
 const port = 8080;
 
+app.use(cors());
+
 //Uncomment to only accept connections from frontend
 // app.use(cors({
 //   origin: 'http://localhost:5173',
