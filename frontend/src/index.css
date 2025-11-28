@@ -1,6 +1,94 @@
 @import "tailwindcss";
 
-body {
-  background: black;
-  color: white;
+:root {
+  --color-primary: #F47321;
+  --color-primary-darker: #C64F00;
+  --color-secondary: #841aff;
+  --color-secondary-darker: #6b00e6;
+  --color-bg: #222222;
 }
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: var(--color-bg);
+  color: white;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  height: 3em;
+  border-bottom: 2px solid var(--color-primary);
+  box-shadow: 0 0 8px 3px var(--color-primary);
+  text-align: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.4s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+button {
+  transition: all 0.4s;
+  font-weight: var(--font-weight-semibold);
+  padding-inline: --spacing(5);
+  padding-block: --spacing(2);
+  border-radius: calc(infinity * 1px);
+  box-shadow: var(--shadow-md);
+
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-darker);
+  color: var(--color-white);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-darker);
+  color: var(--color-white);
+}
+
+.btn-secondary-outline {
+  background-color: var(--color-bg);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary)
+}
+
+.btn-secondary-outline:hover {
+  background-color: var(--color-bg);
+  color: var(--color-secondary-darker);
+  border: 2px solid var(--color-secondary-darker)
+}
+

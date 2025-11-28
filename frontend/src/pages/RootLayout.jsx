@@ -3,7 +3,7 @@ import { Outlet, NavLink } from "react-router-dom";
 export default function RootLayout() {
   return (
     <>
-      <header>
+      <header className='items-center'>
         <nav>
           <NavLink to="/" end>
             Home
@@ -13,7 +13,7 @@ export default function RootLayout() {
           <NavLink to="/players"> Players</NavLink>
         </nav>
       </header>
-      <main>
+      <main className="container mx-auto pt-4">
         <Outlet />
       </main>
     </>
